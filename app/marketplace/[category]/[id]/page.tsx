@@ -259,7 +259,7 @@ export default function VendorDetailPage() {
     return (
       <main className="min-h-screen bg-gray-50">
         <Navigation />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-20 text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Vendor Not Found</h1>
           <Link href="/marketplace" className="text-brand-red hover:underline">
             Back to Marketplace
@@ -285,7 +285,7 @@ export default function VendorDetailPage() {
       <Navigation />
 
       {/* Header */}
-      <div className="bg-white border-b">
+      <div className="bg-white border-b pt-20 md:pt-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 md:py-6">
           <Link
             href={`/marketplace/${category}`}

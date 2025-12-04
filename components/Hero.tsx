@@ -31,7 +31,7 @@ export default function Hero() {
     }
   };
   return (
-    <div className="relative pt-16 pb-16 md:pt-24 md:pb-32 flex items-center justify-center min-h-[85vh] overflow-hidden">
+    <div className="relative pt-20 md:pt-24 pb-16 md:pb-32 flex items-center justify-center min-h-[85vh] overflow-hidden">
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
           <Image
@@ -67,16 +67,20 @@ export default function Hero() {
               <select
                 value={selectedCity}
                 onChange={(e) => setSelectedCity(e.target.value)}
-                className="block w-full pl-9 md:pl-10 pr-8 md:pr-10 py-3 text-sm md:text-base border-none focus:ring-0 focus:outline-none bg-transparent text-gray-700 cursor-pointer appearance-none min-h-[44px]"
+                className={`block w-full pl-9 md:pl-10 pr-8 md:pr-10 py-3 text-sm md:text-base border-none focus:ring-0 focus:outline-none bg-transparent cursor-pointer appearance-none min-h-[44px] ${
+                  !selectedCity ? "text-gray-400" : "text-gray-700"
+                }`}
               >
-                <option value="">Select City (e.g. Warangal)</option>
-                <option>Warangal</option>
-                <option>Nizamabad</option>
-                <option>Medchal</option>
-                <option>Kamareddy</option>
-                <option>Karimnagar</option>
-                <option>Siddipet</option>
-                <option>Mahabubnagar</option>
+                <option value="" disabled className="text-gray-400">
+                  Select City (e.g. Warangal)
+                </option>
+                <option className="text-gray-700">Warangal</option>
+                <option className="text-gray-700">Nizamabad</option>
+                <option className="text-gray-700">Medchal</option>
+                <option className="text-gray-700">Kamareddy</option>
+                <option className="text-gray-700">Karimnagar</option>
+                <option className="text-gray-700">Siddipet</option>
+                <option className="text-gray-700">Mahabubnagar</option>
               </select>
               <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                 <ChevronDown className="text-gray-400 w-4 h-4" />
@@ -89,14 +93,18 @@ export default function Hero() {
               <select
                 value={selectedCategory}
                 onChange={(e) => setSelectedCategory(e.target.value)}
-                className="block w-full pl-9 md:pl-10 pr-8 md:pr-10 py-3 text-sm md:text-base border-none focus:ring-0 focus:outline-none bg-transparent text-gray-700 cursor-pointer appearance-none min-h-[44px]"
+                className={`block w-full pl-9 md:pl-10 pr-8 md:pr-10 py-3 text-sm md:text-base border-none focus:ring-0 focus:outline-none bg-transparent cursor-pointer appearance-none min-h-[44px] ${
+                  !selectedCategory ? "text-gray-400" : "text-gray-700"
+                }`}
               >
-                <option value="">What are you looking for?</option>
-                <option>Venues</option>
-                <option>Photographers</option>
-                <option>Makeup Artists</option>
-                <option>Decorators</option>
-                <option>Catering</option>
+                <option value="" disabled className="text-gray-400">
+                  What are you looking for?
+                </option>
+                <option className="text-gray-700">Venues</option>
+                <option className="text-gray-700">Photographers</option>
+                <option className="text-gray-700">Makeup Artists</option>
+                <option className="text-gray-700">Decorators</option>
+                <option className="text-gray-700">Catering</option>
               </select>
               <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
                 <ChevronDown className="text-gray-400 w-4 h-4" />

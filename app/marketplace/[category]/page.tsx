@@ -201,7 +201,7 @@ export default function CategoryPage() {
     return (
       <main className="min-h-screen bg-gray-50">
         <Navigation />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-20 text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Category Not Found</h1>
           <Link href="/marketplace" className="text-brand-red hover:underline">
             Back to Marketplace
@@ -226,7 +226,7 @@ export default function CategoryPage() {
       <Navigation />
 
       {/* Category Header */}
-      <div className="bg-gradient-to-br from-brand-red to-red-900 text-white py-6 md:py-10">
+      <div className="bg-gradient-to-br from-brand-red to-red-900 text-white pt-20 md:pt-24 pb-6 md:pb-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/marketplace"
@@ -261,16 +261,20 @@ export default function CategoryPage() {
                 <select
                   value={selectedCity}
                   onChange={(e) => setSelectedCity(e.target.value)}
-                  className="w-full pl-10 pr-10 py-3 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-brand-red appearance-none bg-white text-gray-700"
+                  className={`w-full pl-10 pr-10 py-3 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-brand-red appearance-none bg-white ${
+                    !selectedCity ? "text-gray-400" : "text-gray-700"
+                  }`}
                 >
-                  <option value="">All Cities</option>
+                  <option value="" disabled className="text-gray-400">
+                    Select City
+                  </option>
                   {cities.map((city) => (
-                    <option key={city} value={city}>
+                    <option key={city} value={city} className="text-gray-700">
                       {city}
                     </option>
                   ))}
                 </select>
-                <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none z-10">
                   <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>

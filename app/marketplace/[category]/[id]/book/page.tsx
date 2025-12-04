@@ -115,7 +115,7 @@ export default function BookingPage() {
     return (
       <main className="min-h-screen bg-gray-50">
         <Navigation />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-20 text-center">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">Invalid Booking</h1>
           <Link href="/marketplace" className="text-brand-red hover:underline">
             Back to Marketplace
@@ -147,7 +147,7 @@ export default function BookingPage() {
     return (
       <main className="min-h-screen bg-gray-50">
         <Navigation />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-20">
             <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl p-6 md:p-8 text-center">
               <div className="w-16 h-16 md:w-20 md:h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-6">
                 <CheckCircle className="w-10 h-10 md:w-12 md:h-12 text-green-500" />
@@ -222,7 +222,7 @@ export default function BookingPage() {
     <main className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Navigation />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 md:pt-24 pb-6 md:pb-8">
         <Link
           href={`/marketplace/${category}/${id}`}
           className="inline-flex items-center gap-2 text-gray-600 hover:text-brand-red mb-4 md:mb-6 text-sm md:text-base"

@@ -118,7 +118,7 @@ function MarketplaceContent() {
       <Navigation />
       
       {/* Hero Search Section */}
-      <div className="bg-gradient-to-br from-brand-red to-red-900 text-white py-8 md:py-12">
+      <div className="bg-gradient-to-br from-brand-red to-red-900 text-white pt-20 md:pt-24 pb-8 md:pb-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 md:mb-6">
             Find Your Perfect Wedding Vendor
@@ -140,34 +140,52 @@ function MarketplaceContent() {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="relative">
-                  <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                  <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
                   <select
                     value={selectedCity}
                     onChange={(e) => setSelectedCity(e.target.value)}
-                    className="w-full pl-10 pr-4 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent appearance-none bg-white"
+                    className={`w-full pl-10 pr-10 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent appearance-none bg-white ${
+                      !selectedCity ? "text-gray-400" : "text-gray-700"
+                    }`}
                   >
-                    <option value="">All Cities</option>
+                    <option value="" disabled className="text-gray-400">
+                      Select City
+                    </option>
                     {cities.map((city) => (
-                      <option key={city} value={city}>
+                      <option key={city} value={city} className="text-gray-700">
                         {city}
                       </option>
                     ))}
                   </select>
+                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none z-10">
+                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
                 </div>
                 
                 <div className="relative">
                   <select
                     value={selectedCategory}
                     onChange={(e) => setSelectedCategory(e.target.value)}
-                    className="w-full pl-4 pr-4 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent appearance-none bg-white"
+                    className={`w-full pl-4 pr-10 py-3 text-base border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent appearance-none bg-white ${
+                      !selectedCategory ? "text-gray-400" : "text-gray-700"
+                    }`}
                   >
-                    <option value="">All Categories</option>
+                    <option value="" disabled className="text-gray-400">
+                      Select Category
+                    </option>
                     {categories.map((cat) => (
-                      <option key={cat.slug} value={cat.slug}>
+                      <option key={cat.slug} value={cat.slug} className="text-gray-700">
                         {cat.name}
                       </option>
                     ))}
                   </select>
+                  <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none z-10">
+                    <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </div>
                 </div>
               </div>
               
