@@ -1,5 +1,7 @@
 "use client";
 
+import Link from "next/link";
+
 export default function CTA() {
   return (
     <section
@@ -21,9 +23,12 @@ export default function CTA() {
           Get access to 5000+ budget vendors and exclusive deals in your city.
         </p>
         <div className="flex flex-col sm:flex-row justify-center gap-4">
-          <button className="bg-white text-brand-red font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition shadow-lg">
+          <Link
+            href="/marketplace"
+            className="bg-white text-brand-red font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition shadow-lg text-center"
+          >
             Find Vendors
-          </button>
+          </Link>
           <button className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-brand-red transition">
             Contact Expert
           </button>

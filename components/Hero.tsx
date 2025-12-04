@@ -1,9 +1,35 @@
 "use client";
 
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { MapPin, Search, CheckCircle, ChevronDown } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
+  const router = useRouter();
+  const [selectedCity, setSelectedCity] = useState("");
+  const [selectedCategory, setSelectedCategory] = useState("");
+
+  const categoryMap: Record<string, string> = {
+    Venues: "venues",
+    Photographers: "photography",
+    "Makeup Artists": "makeup",
+    Decorators: "decor",
+    Catering: "catering",
+  };
+
+  const handleSearch = () => {
+    if (selectedCategory) {
+      const categorySlug = categoryMap[selectedCategory] || selectedCategory.toLowerCase();
+      if (selectedCity) {
+        router.push(`/marketplace/${categorySlug}?city=${encodeURIComponent(selectedCity)}`);
+      } else {
+        router.push(`/marketplace/${categorySlug}`);
+      }
+    } else {
+      router.push("/marketplace");
+    }
+  };
   return (
     <div className="relative pt-16 pb-16 md:pt-24 md:pb-32 flex items-center justify-center min-h-[85vh] overflow-hidden">
       <div className="absolute inset-0 z-0">
@@ -32,14 +58,18 @@ export default function Hero() {
           every ceremony in Tier-2 & Tier-3 cities.
         </p>
 
-        <div className="bg-white p-3 rounded-2xl shadow-2xl max-w-3xl mx-auto transform transition hover:scale-[1.01] duration-300">
-          <div className="flex flex-col md:flex-row gap-2">
-            <div className="relative flex-1 border-b md:border-b-0 md:border-r border-gray-200">
+        <div className="bg-white p-3 md:p-4 rounded-2xl shadow-2xl max-w-3xl mx-auto transform transition hover:scale-[1.01] duration-300">
+          <div className="flex flex-col md:flex-row gap-2 md:gap-3">
+            <div className="relative flex-1 border-b md:border-b-0 md:border-r border-gray-200 pb-2 md:pb-0">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <MapPin className="text-brand-red w-5 h-5" />
+                <MapPin className="text-brand-red w-4 h-4 md:w-5 md:h-5" />
               </div>
-              <select className="block w-full pl-10 pr-3 py-3 text-base border-none focus:ring-0 focus:outline-none bg-transparent text-gray-700 cursor-pointer appearance-none">
-                <option>Select City (e.g. Warangal)</option>
+              <select
+                value={selectedCity}
+                onChange={(e) => setSelectedCity(e.target.value)}
+                className="block w-full pl-9 md:pl-10 pr-8 md:pr-10 py-3 text-sm md:text-base border-none focus:ring-0 focus:outline-none bg-transparent text-gray-700 cursor-pointer appearance-none min-h-[44px]"
+              >
+                <option value="">Select City (e.g. Warangal)</option>
                 <option>Warangal</option>
                 <option>Nizamabad</option>
                 <option>Medchal</option>
@@ -52,12 +82,16 @@ export default function Hero() {
                 <ChevronDown className="text-gray-400 w-4 h-4" />
               </div>
             </div>
-            <div className="relative flex-1">
+            <div className="relative flex-1 border-b md:border-b-0 md:border-r border-gray-200 pb-2 md:pb-0">
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <Search className="text-gray-400 w-5 h-5" />
+                <Search className="text-gray-400 w-4 h-4 md:w-5 md:h-5" />
               </div>
-              <select className="block w-full pl-10 pr-3 py-3 text-base border-none focus:ring-0 focus:outline-none bg-transparent text-gray-700 cursor-pointer appearance-none">
-                <option>What are you looking for?</option>
+              <select
+                value={selectedCategory}
+                onChange={(e) => setSelectedCategory(e.target.value)}
+                className="block w-full pl-9 md:pl-10 pr-8 md:pr-10 py-3 text-sm md:text-base border-none focus:ring-0 focus:outline-none bg-transparent text-gray-700 cursor-pointer appearance-none min-h-[44px]"
+              >
+                <option value="">What are you looking for?</option>
                 <option>Venues</option>
                 <option>Photographers</option>
                 <option>Makeup Artists</option>
@@ -68,7 +102,10 @@ export default function Hero() {
                 <ChevronDown className="text-gray-400 w-4 h-4" />
               </div>
             </div>
-            <button className="bg-brand-red text-white px-8 py-3 rounded-xl font-medium hover:bg-red-900 transition md:w-auto w-full">
+            <button
+              onClick={handleSearch}
+              className="bg-brand-red text-white px-6 md:px-8 py-3 rounded-xl font-medium hover:bg-red-900 transition md:w-auto w-full min-h-[44px] text-sm md:text-base"
+            >
               Find Vendors
             </button>
           </div>

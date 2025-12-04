@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const services = [
   {
@@ -49,27 +50,38 @@ export default function Services() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer"
-            >
-              <div className="h-32 bg-gray-200 overflow-hidden relative">
-                <Image
-                  src={service.image}
-                  alt={service.title}
-                  fill
-                  className="object-cover group-hover:scale-110 transition duration-500"
-                />
-              </div>
-              <div className="p-4 text-center">
-                <h3 className="font-bold text-gray-800 mb-1">
-                  {service.title}
-                </h3>
-                <p className="text-xs text-gray-500">{service.description}</p>
-              </div>
-            </div>
-          ))}
+          {services.map((service, index) => {
+            const categoryMap: Record<string, string> = {
+              Venues: "venues",
+              Photography: "photography",
+              Makeup: "makeup",
+              Decor: "decor",
+              Catering: "catering",
+            };
+            const categorySlug = categoryMap[service.title] || service.title.toLowerCase();
+            return (
+              <Link
+                key={index}
+                href={`/marketplace/${categorySlug}`}
+                className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer"
+              >
+                <div className="h-32 bg-gray-200 overflow-hidden relative">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover group-hover:scale-110 transition duration-500"
+                  />
+                </div>
+                <div className="p-4 text-center">
+                  <h3 className="font-bold text-gray-800 mb-1">
+                    {service.title}
+                  </h3>
+                  <p className="text-xs text-gray-500">{service.description}</p>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
