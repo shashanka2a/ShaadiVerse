@@ -25,13 +25,18 @@ export default function CTA() {
         <div className="flex flex-col sm:flex-row justify-center gap-4">
           <Link
             href="/marketplace"
-            className="bg-white text-brand-red font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition shadow-lg text-center"
+            className="bg-white text-brand-red font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition shadow-lg text-center min-h-[48px] flex items-center justify-center"
+            aria-label="Find Vendors - Browse wedding vendors"
           >
             Find Vendors
           </Link>
-          <button className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-brand-red transition">
+          <a
+            href="mailto:contact@shaadiverse.com?subject=Wedding Planning Inquiry"
+            className="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-brand-red transition text-center min-h-[48px] flex items-center justify-center"
+            aria-label="Contact Wedding Expert"
+          >
             Contact Expert
-          </button>
+          </a>
         </div>
       </div>
     </section>

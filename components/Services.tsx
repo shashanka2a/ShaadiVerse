@@ -64,11 +64,12 @@ export default function Services() {
                 key={index}
                 href={`/marketplace/${categorySlug}`}
                 className="group bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer"
+                aria-label={`Browse ${service.title} vendors - ${service.description}`}
               >
                 <div className="h-32 bg-gray-200 overflow-hidden relative">
                   <Image
                     src={service.image}
-                    alt={service.title}
+                    alt={`${service.title} - ${service.description}`}
                     fill
                     className="object-cover group-hover:scale-110 transition duration-500"
                   />

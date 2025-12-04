@@ -1,10 +1,12 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import { Search, MapPin, Filter, SlidersHorizontal, X } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
+import BottomNav from "@/components/BottomNav";
 import Footer from "@/components/Footer";
 
 const categories = [
@@ -84,13 +86,21 @@ const mockVendors = [
   },
 ];
 
-export default function MarketplacePage() {
+function MarketplaceContent() {
+  const searchParams = useSearchParams();
   const [selectedCity, setSelectedCity] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [searchQuery, setSearchQuery] = useState<string>("");
   const [showFilters, setShowFilters] = useState(false);
   const [priceRange, setPriceRange] = useState<[number, number]>([0, 100000]);
   const [minRating, setMinRating] = useState<number>(0);
+
+  useEffect(() => {
+    const cityParam = searchParams.get("city");
+    if (cityParam) {
+      setSelectedCity(cityParam);
+    }
+  }, [searchParams]);
 
   // Filter vendors based on selections
   const filteredVendors = mockVendors.filter((vendor) => {
@@ -104,7 +114,7 @@ export default function MarketplacePage() {
   });
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Navigation />
       
       {/* Hero Search Section */}
@@ -226,6 +236,7 @@ export default function MarketplacePage() {
               key={category.slug}
               href={`/marketplace/${category.slug}`}
               className="bg-white p-4 md:p-6 rounded-xl shadow-sm hover:shadow-lg transition text-center group min-h-[120px] md:min-h-[140px] flex flex-col items-center justify-center"
+              aria-label={`Browse ${category.name} vendors`}
             >
               <div className="text-3xl md:text-4xl mb-2">{category.icon}</div>
               <h3 className="font-semibold text-sm md:text-base text-gray-900 group-hover:text-brand-red transition">
@@ -307,7 +318,23 @@ export default function MarketplacePage() {
       </div>
 
       <Footer />
+      <BottomNav />
     </main>
+  );
+}
+
+export default function MarketplacePage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-gray-50 pb-20 md:pb-0">
+        <Navigation />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+          <div className="animate-pulse">Loading...</div>
+        </div>
+      </main>
+    }>
+      <MarketplaceContent />
+    </Suspense>
   );
 }
 

@@ -18,6 +18,7 @@ import {
 import Link from "next/link";
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
+import BottomNav from "@/components/BottomNav";
 import Footer from "@/components/Footer";
 
 // Mock vendor data - in real app, this would come from API
@@ -280,7 +281,7 @@ export default function VendorDetailPage() {
   };
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Navigation />
 
       {/* Header */}
@@ -493,6 +494,7 @@ export default function VendorDetailPage() {
       </div>
 
       <Footer />
+      <BottomNav />
     </main>
   );
 }

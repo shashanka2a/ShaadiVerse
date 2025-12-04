@@ -6,6 +6,7 @@ import { Search, MapPin, Star, CheckCircle, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import Navigation from "@/components/Navigation";
+import BottomNav from "@/components/BottomNav";
 import Footer from "@/components/Footer";
 
 const categoryInfo: Record<string, { name: string; icon: string; description: string }> = {
@@ -221,20 +222,20 @@ export default function CategoryPage() {
   });
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Navigation />
 
       {/* Category Header */}
-      <div className="bg-gradient-to-br from-brand-red to-red-900 text-white py-8 md:py-12">
+      <div className="bg-gradient-to-br from-brand-red to-red-900 text-white py-6 md:py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Link
             href="/marketplace"
-            className="inline-flex items-center gap-2 text-white/80 hover:text-white mb-4 text-sm md:text-base"
+            className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-lg mb-4 text-sm md:text-base transition font-medium"
           >
             <ArrowLeft className="w-4 h-4" />
             Back to Marketplace
           </Link>
-          <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-6">
+          <div className="flex items-center gap-3 md:gap-4 mb-4 md:mb-5">
             <span className="text-4xl md:text-5xl">{categoryData.icon}</span>
             <div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-1 md:mb-2">{categoryData.name}</h1>
@@ -243,24 +244,24 @@ export default function CategoryPage() {
           </div>
 
           {/* Filters */}
-          <div className="bg-white rounded-xl p-3 md:p-4 shadow-xl mt-4 md:mt-6">
-            <div className="flex flex-col gap-3">
+          <div className="bg-white rounded-xl p-4 md:p-5 shadow-xl">
+            <div className="flex flex-col sm:flex-row gap-3">
               <div className="flex-1 relative">
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
                 <input
                   type="text"
                   placeholder="Search vendors..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent"
+                  className="w-full pl-10 pr-4 py-3 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-brand-red bg-white"
                 />
               </div>
               <div className="relative flex-1">
-                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
+                <MapPin className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5 z-10" />
                 <select
                   value={selectedCity}
                   onChange={(e) => setSelectedCity(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent appearance-none bg-white"
+                  className="w-full pl-10 pr-10 py-3 text-base border-2 border-gray-200 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-brand-red appearance-none bg-white text-gray-700"
                 >
                   <option value="">All Cities</option>
                   {cities.map((city) => (
@@ -269,6 +270,11 @@ export default function CategoryPage() {
                     </option>
                   ))}
                 </select>
+                <div className="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                  <svg className="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
@@ -351,6 +357,7 @@ export default function CategoryPage() {
       </div>
 
       <Footer />
+      <BottomNav />
     </main>
   );
 }

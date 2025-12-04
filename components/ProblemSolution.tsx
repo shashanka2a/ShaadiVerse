@@ -12,8 +12,8 @@ export default function ProblemSolution() {
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-20 h-20 bg-brand-pink rounded-full -z-10"></div>
             <Image
-              src="https://images.unsplash.com/photo-1621621667797-e06afc217fb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-              alt="Couple discussing wedding budget"
+              src="https://images.pexels.com/photos/10249928/pexels-photo-10249928.jpeg"
+              alt="Indian couple planning their wedding"
               width={800}
               height={400}
               className="rounded-2xl shadow-xl w-full object-cover h-[400px]"
@@ -61,7 +61,8 @@ export default function ProblemSolution() {
             <div className="mt-8">
               <Link
                 href="#services"
-                className="text-brand-red font-semibold hover:text-red-900 inline-flex items-center"
+                className="text-brand-red font-semibold hover:text-red-900 inline-flex items-center min-h-[44px]"
+                aria-label="Explore wedding services"
               >
                 Explore Services <ArrowRight className="ml-2 w-4 h-4" />
               </Link>

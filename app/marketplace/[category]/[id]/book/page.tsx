@@ -15,6 +15,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import Navigation from "@/components/Navigation";
+import BottomNav from "@/components/BottomNav";
 import Footer from "@/components/Footer";
 
 // Mock vendor data - same as detail page
@@ -212,12 +213,13 @@ export default function BookingPage() {
           </div>
         </div>
         <Footer />
+        <BottomNav />
       </main>
     );
   }
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <main className="min-h-screen bg-gray-50 pb-20 md:pb-0">
       <Navigation />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
@@ -516,6 +518,7 @@ export default function BookingPage() {
       </div>
 
       <Footer />
+      <BottomNav />
     </main>
   );
 }

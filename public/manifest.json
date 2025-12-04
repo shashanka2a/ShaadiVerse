@@ -1,0 +1,21 @@
+{
+  "name": "Shaadiverse - Budget Wedding Services",
+  "short_name": "Shaadiverse",
+  "description": "India's trusted budget wedding directory. Find verified vendors for venues, photography, makeup, decor, and catering in Tier-2 & Tier-3 cities.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#A61C2E",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["lifestyle", "shopping", "business"],
+  "screenshots": []
+}
+

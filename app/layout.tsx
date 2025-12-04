@@ -45,6 +45,9 @@ export const metadata: Metadata = {
 export const viewport = {
   width: "device-width",
   initialScale: 1,
+  maximumScale: 5,
+  userScalable: true,
+  themeColor: "#A61C2E",
 };
 
 export default function RootLayout({
@@ -54,6 +57,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
+      <head>
+        <link rel="manifest" href="/manifest.json" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-title" content="Shaadiverse" />
+      </head>
       <body className={`${outfit.variable} ${greatVibes.variable} font-sans text-text-dark bg-white antialiased`}>
         {children}
       </body>

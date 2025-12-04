@@ -49,8 +49,9 @@ export default function PopularCities() {
             </p>
           </div>
           <Link
-            href="#"
+            href="/marketplace"
             className="text-brand-red font-medium hover:underline mt-4 md:mt-0"
+            aria-label="View all cities in marketplace"
           >
             View all cities
           </Link>
@@ -60,12 +61,13 @@ export default function PopularCities() {
           {cities.map((city, index) => (
             <Link
               key={index}
-              href="#"
+              href={`/marketplace?city=${encodeURIComponent(city.name)}`}
               className="relative rounded-lg overflow-hidden group h-40"
+              aria-label={`Browse vendors in ${city.name}`}
             >
               <Image
                 src={city.image}
-                alt={city.name}
+                alt={`${city.name} wedding vendors`}
                 fill
                 className="object-cover group-hover:scale-110 transition duration-500"
               />

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Navigation from "@/components/Navigation";
+import BottomNav from "@/components/BottomNav";
 import Hero from "@/components/Hero";
 import ProblemSolution from "@/components/ProblemSolution";
 import Services from "@/components/Services";
@@ -13,7 +14,7 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    <main className="pb-20 md:pb-0">
       <Navigation />
       <Hero />
       <ProblemSolution />
@@ -23,6 +24,7 @@ export default function Home() {
       <Testimonials />
       <CTA />
       <Footer />
+      <BottomNav />
     </main>
   );
 }
