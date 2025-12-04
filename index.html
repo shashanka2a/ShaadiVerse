@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shaadiverse - Budget Wedding Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-red': '#A61C2E', // Lighter, vibrant Maroon
+                        'brand-pink': '#FFF0F2', // Light background
+                        'brand-gold': '#FBBF24', // Accent
+                        'text-dark': '#1F2937',
+                        'text-light': '#6B7280',
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        script: ['Great Vibes', 'cursive'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-pattern {
+            background-color: #FFF0F2;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23A61C2E' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .text-shadow {
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="font-sans text-text-dark bg-white antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100 shadow-sm transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center gap-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                    <i class="fas fa-rings-wedding text-brand-red text-2xl"></i>
+                    <span class="font-bold text-2xl tracking-tight text-brand-red">Shaadi<span class="text-text-dark">verse</span></span>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#services" class="text-gray-600 hover:text-brand-red font-medium transition">Services</a>
+                    <a href="#how-it-works" class="text-gray-600 hover:text-brand-red font-medium transition">How it Works</a>
+                    <a href="#cities" class="text-gray-600 hover:text-brand-red font-medium transition">Cities</a>
+                    <a href="#testimonials" class="text-gray-600 hover:text-brand-red font-medium transition">Reviews</a>
+                    <button class="bg-brand-red text-white px-5 py-2 rounded-full font-medium hover:bg-red-900 transition shadow-lg shadow-red-200">
+                        Vendor Login
+                    </button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-red focus:outline-none p-2">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full">
+            <div class="px-4 pt-2 pb-6 space-y-2 shadow-lg">
+                <a href="#services" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-brand-red hover:bg-red-50">Services</a>
+                <a href="#how-it-works" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-brand-red hover:bg-red-50">How it Works</a>
+                <a href="#cities" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-brand-red hover:bg-red-50">Cities</a>
+                <a href="#testimonials" class="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-brand-red hover:bg-red-50">Reviews</a>
+                <div class="pt-4">
+                    <button class="w-full bg-brand-red text-white px-5 py-3 rounded-lg font-medium hover:bg-red-900">Vendor Login</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative pt-16 pb-16 md:pt-24 md:pb-32 flex items-center justify-center min-h-[85vh] overflow-hidden">
+        <!-- Background Image with Overlay -->
+        <div class="absolute inset-0 z-0">
+            <!-- Updated Hero Image: Traditional South Indian Wedding -->
+            <img src="http://googleusercontent.com/image_collection/image_retrieval/14283314775691552163" alt="Traditional South Indian Wedding" class="w-full h-full object-cover object-center">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center w-full">
+            <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg">
+                Your Dream Wedding,<br>
+                <span class="text-brand-gold font-script text-5xl md:text-7xl">Within Budget</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
+                India's trusted budget wedding directory. Verified vendors for every ceremony in Tier-2 & Tier-3 cities.
+            </p>
+
+            <!-- Search Box -->
+            <div class="bg-white p-3 rounded-2xl shadow-2xl max-w-3xl mx-auto transform transition hover:scale-[1.01] duration-300">
+                <div class="flex flex-col md:flex-row gap-2">
+                    <div class="relative flex-1 border-b md:border-b-0 md:border-r border-gray-200">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-map-marker-alt text-brand-red"></i>
+                        </div>
+                        <select class="block w-full pl-10 pr-3 py-3 text-base border-none focus:ring-0 focus:outline-none bg-transparent text-gray-700 cursor-pointer appearance-none">
+                            <option>Select City (e.g. Warangal)</option>
+                            <option>Warangal</option>
+                            <option>Nizamabad</option>
+                            <option>Medchal</option>
+                            <option>Kamareddy</option>
+                            <option>Karimnagar</option>
+                            <option>Siddipet</option>
+                            <option>Mahabubnagar</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <i class="fas fa-chevron-down text-gray-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <div class="relative flex-1">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                        <select class="block w-full pl-10 pr-3 py-3 text-base border-none focus:ring-0 focus:outline-none bg-transparent text-gray-700 cursor-pointer appearance-none">
+                            <option>What are you looking for?</option>
+                            <option>Venues</option>
+                            <option>Photographers</option>
+                            <option>Makeup Artists</option>
+                            <option>Decorators</option>
+                            <option>Catering</option>
+                        </select>
+                        <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none">
+                            <i class="fas fa-chevron-down text-gray-400 text-xs"></i>
+                        </div>
+                    </div>
+                    <button class="bg-brand-red text-white px-8 py-3 rounded-xl font-medium hover:bg-red-900 transition md:w-auto w-full">
+                        Find Vendors
+                    </button>
+                </div>
+            </div>
+            
+            <p class="mt-4 text-white/80 text-sm">
+                <i class="fas fa-check-circle text-brand-gold mr-1"></i> 10,000+ Verified Vendors &nbsp;
+                <i class="fas fa-check-circle text-brand-gold mr-1"></i> Transparent Pricing
+            </p>
+        </div>
+    </div>
+
+    <!-- The Problem & Solution -->
+    <section class="py-16 bg-white" id="problem-solution">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="relative">
+                    <div class="absolute -top-4 -left-4 w-20 h-20 bg-brand-pink rounded-full -z-10"></div>
+                    <!-- Image: Indian couple in discussion -->
+                    <img src="https://images.unsplash.com/photo-1621621667797-e06afc217fb0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Couple discussing wedding budget" class="rounded-2xl shadow-xl w-full object-cover h-[400px]">
+                    <div class="absolute bottom-6 right-6 bg-white p-4 rounded-lg shadow-lg max-w-xs border-l-4 border-brand-red">
+                        <p class="text-sm font-semibold text-gray-800">"Quotes were too high, and hidden costs everywhere..."</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Planning a wedding shouldn't break the bank.</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-red-100 flex items-center justify-center text-brand-red text-xl">
+                                <i class="fas fa-comment-dollar"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900">The Problem</h3>
+                                <p class="text-gray-600">Vendors often quote random prices, add hidden charges, or don't serve specific localities.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 text-xl">
+                                <i class="fas fa-hand-holding-heart"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg text-gray-900">The Shaadiverse Solution</h3>
+                                <p class="text-gray-600">We verify local vendors, negotiate transparent "package rates", and ensure quality service within your budget.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#services" class="text-brand-red font-semibold hover:text-red-900 inline-flex items-center">
+                            Explore Services <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-brand-pink/50 hero-pattern" id="services">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900">Everything You Need</h2>
+                <p class="text-gray-600 mt-2">Curated categories for a complete wedding experience</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
+                <!-- Service Card 1: Venues -->
+                <div class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer">
+                    <div class="h-32 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-800 mb-1">Venues</h3>
+                        <p class="text-xs text-gray-500">Banquet halls, Lawns</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 2: Photography (FIXED IMAGE) -->
+                <div class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer">
+                    <div class="h-32 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-800 mb-1">Photography</h3>
+                        <p class="text-xs text-gray-500">Candid, Pre-wedding</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 3: Makeup -->
+                <div class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer">
+                    <div class="h-32 bg-gray-200 overflow-hidden relative">
+                        <!-- Indian Bridal Makeup -->
+                        <img src="https://images.unsplash.com/photo-1516975080664-ed2fc6a32937?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-800 mb-1">Makeup</h3>
+                        <p class="text-xs text-gray-500">Bridal, Party</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 4: Decor -->
+                <div class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer">
+                    <div class="h-32 bg-gray-200 overflow-hidden relative">
+                        <!-- Indian Floral Decor -->
+                        <img src="https://images.unsplash.com/photo-1478146059778-26028b07395a?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-800 mb-1">Decor</h3>
+                        <p class="text-xs text-gray-500">Mandap, Entry</p>
+                    </div>
+                </div>
+
+                <!-- Service Card 5: Catering -->
+                <div class="group bg-white rounded-xl shadow-sm hover:shadow-xl transition duration-300 overflow-hidden cursor-pointer">
+                    <div class="h-32 bg-gray-200 overflow-hidden relative">
+                        <!-- Indian Food/Buffet -->
+                        <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-4 text-center">
+                        <h3 class="font-bold text-gray-800 mb-1">Catering</h3>
+                        <p class="text-xs text-gray-500">Veg, Non-Veg</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-white" id="how-it-works">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-brand-red font-semibold tracking-wider text-sm uppercase">Why Shaadiverse</span>
+                <h2 class="text-3xl font-bold text-gray-900 mt-2">Simplicity at its Best</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6 border border-gray-100 rounded-2xl hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-red-50 text-brand-red rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Transparent Pricing</h3>
+                    <p class="text-gray-600">See base prices upfront. No negotiation headaches. We ensure you get the standard market rate.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="text-center p-6 border border-gray-100 rounded-2xl hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-red-50 text-brand-red rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Verified Vendors</h3>
+                    <p class="text-gray-600">Every vendor is physically verified by our ground team. We check their portfolio and past client reviews.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="text-center p-6 border border-gray-100 rounded-2xl hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-red-50 text-brand-red rounded-full flex items-center justify-center mx-auto mb-4 text-2xl">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Shaadiverse Trust</h3>
+                    <p class="text-gray-600">We hold payments in escrow until the service is delivered to your satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Cities -->
+    <section class="py-16 bg-gray-50" id="cities">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900">Popular Cities</h2>
+                    <p class="text-gray-600 mt-2">Serving Tier-2 and Tier-3 cities across Telangana</p>
+                </div>
+                <a href="#" class="text-brand-red font-medium hover:underline mt-4 md:mt-0">View all cities</a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <a href="#" class="relative rounded-lg overflow-hidden group h-40">
+                    <!-- Warangal: Kakatiya style architecture vibe -->
+                    <img src="https://images.unsplash.com/photo-1605445210217-1906cb524225?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <span class="text-white font-bold text-lg">Warangal</span>
+                    </div>
+                </a>
+                <a href="#" class="relative rounded-lg overflow-hidden group h-40">
+                    <!-- Nizamabad: Fort/Hillock vibe -->
+                    <img src="https://images.unsplash.com/photo-1596547608101-7973c17d74db?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <span class="text-white font-bold text-lg">Nizamabad</span>
+                    </div>
+                </a>
+                <a href="#" class="relative rounded-lg overflow-hidden group h-40">
+                    <!-- Medchal: Greenery/Farmhouse wedding vibe -->
+                    <img src="https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <span class="text-white font-bold text-lg">Medchal</span>
+                    </div>
+                </a>
+                <a href="#" class="relative rounded-lg overflow-hidden group h-40">
+                    <!-- Kamareddy: Rustic Fort/Heritage vibe -->
+                    <img src="https://images.unsplash.com/photo-1582510003544-4d00b785e271?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end p-4">
+                        <span class="text-white font-bold text-lg">Kamareddy</span>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="mt-8 flex flex-wrap gap-2 justify-center text-sm text-gray-500">
+                <span class="px-3 py-1 bg-white border rounded-full">Karimnagar</span>
+                <span class="px-3 py-1 bg-white border rounded-full">Siddipet</span>
+                <span class="px-3 py-1 bg-white border rounded-full">Jagtial</span>
+                <span class="px-3 py-1 bg-white border rounded-full">Mahabubnagar</span>
+                <span class="px-3 py-1 bg-white border rounded-full">Khammam</span>
+                <span class="px-3 py-1 bg-white border rounded-full">Nalgonda</span>
+                <span class="px-3 py-1 bg-white border rounded-full">Adilabad</span>
+                <span class="px-3 py-1 bg-white border rounded-full">Mancherial</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-16 bg-brand-pink/30" id="testimonials">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Happy Couples</h2>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm flex gap-4">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-14 h-14 rounded-full object-cover border-2 border-brand-red">
+                    <div>
+                        <div class="flex text-brand-gold mb-2 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-600 italic text-sm mb-3">"Found an amazing photographer in Warangal within my budget. The team at Shaadiverse was very helpful in negotiating the final price."</p>
+                        <p class="font-bold text-gray-900">- Priya & Rahul, <span class="text-xs font-normal text-gray-500">Warangal</span></p>
+                    </div>
+                </div>
+                <!-- Review 2 -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm flex gap-4">
+                    <img src="https://randomuser.me/api/portraits/men/32.jpg" class="w-14 h-14 rounded-full object-cover border-2 border-brand-red">
+                    <div>
+                        <div class="flex text-brand-gold mb-2 text-sm">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="text-gray-600 italic text-sm mb-3">"Used their package for Venue and Catering in Nizamabad. Everything was transparent, no hidden charges which was my biggest fear."</p>
+                        <p class="font-bold text-gray-900">- Amit Kumar, <span class="text-xs font-normal text-gray-500">Nizamabad</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="py-20 bg-brand-red relative overflow-hidden text-center px-4" id="cta">
+        <div class="absolute inset-0 opacity-10" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+        <div class="relative z-10 max-w-2xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ready to plan your wedding?</h2>
+            <p class="text-white/90 text-lg mb-8">Get access to 5000+ budget vendors and exclusive deals in your city.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-brand-red font-bold py-3 px-8 rounded-full hover:bg-gray-100 transition shadow-lg">
+                    Find Vendors
+                </button>
+                <button class="bg-transparent border-2 border-white text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-brand-red transition">
+                    Contact Expert
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <!-- Col 1 -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                         <i class="fas fa-rings-wedding text-brand-red text-xl"></i>
+                        <span class="font-bold text-2xl text-white">Shaadi<span class="text-brand-red">verse</span></span>
+                    </div>
+                    <p class="text-sm text-gray-400">Making Indian weddings affordable, transparent, and hassle-free for everyone.</p>
+                </div>
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-red">About Us</a></li>
+                        <li><a href="#" class="hover:text-brand-red">Careers</a></li>
+                        <li><a href="#" class="hover:text-brand-red">Blog</a></li>
+                        <li><a href="#" class="hover:text-brand-red">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Vendors</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-brand-red">Vendor Login</a></li>
+                        <li><a href="#" class="hover:text-brand-red">Register as Vendor</a></li>
+                        <li><a href="#" class="hover:text-brand-red">Success Stories</a></li>
+                    </ul>
+                </div>
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><i class="fas fa-envelope mr-2"></i> hello@shaadiverse.in</li>
+                        <li><i class="fas fa-phone mr-2"></i> +91 98765 43210</li>
+                        <li class="flex gap-4 mt-4">
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-red transition"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-red transition"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="w-8 h-8 rounded-full bg-gray-800 flex items-center justify-center hover:bg-brand-red transition"><i class="fab fa-twitter"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
+                &copy; 2023 Shaadiverse Technologies Pvt Ltd. All rights reserved. Made with <i class="fas fa-heart text-red-500"></i> in India.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script for interaction -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close menu when clicking a link
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+</body>
+</html>
