@@ -19,6 +19,11 @@ export const metadata: Metadata = {
   description: "India's trusted budget wedding directory. Find verified vendors for venues, photography, makeup, decor, and catering in Tier-2 & Tier-3 cities. Transparent pricing, no hidden charges.",
   keywords: "wedding vendors, budget wedding, wedding planning, wedding venues, wedding photography, wedding makeup, wedding decor, wedding catering, Tier-2 cities, Tier-3 cities, Telangana weddings",
   authors: [{ name: "Shaadiverse" }],
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
   openGraph: {
     title: "Shaadiverse - Budget Wedding Services",
     description: "India's trusted budget wedding directory. Verified vendors for every ceremony in Tier-2 & Tier-3 cities.",

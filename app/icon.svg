@@ -1,5 +1,5 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="14" cy="12" r="4" fill="#A61C2E"/>
-  <circle cx="18" cy="12" r="4" fill="#F6B624"/>
-  <path d="M16 12L16 24" stroke="#A61C2E" stroke-width="2" stroke-linecap="round"/>
+  <!-- Heart icon in Lucide style with brand colors -->
+  <path d="M20.84 5.61a5.5 5.5 0 0 0-7.78 0L12 6.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 22.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="#A61C2E" stroke="#A61C2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M20.84 5.61a5.5 5.5 0 0 0-7.78 0L12 6.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 22.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" fill="none" stroke="#FBBF24" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
