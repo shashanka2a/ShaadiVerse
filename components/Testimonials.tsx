@@ -9,14 +9,14 @@ const testimonials = [
     location: "Warangal",
     rating: 5,
     text: "Found an amazing photographer in Warangal within my budget. The team at Shaadiverse was very helpful in negotiating the final price.",
-    image: "https://randomuser.me/api/portraits/women/44.jpg",
+    image: "/testimonial-priya-rahul.jpg",
   },
   {
     name: "Amit Kumar",
     location: "Nizamabad",
     rating: 4.5,
     text: "Used their package for Venue and Catering in Nizamabad. Everything was transparent, no hidden charges which was my biggest fear.",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: "/testimonial-amit.jpg",
   },
 ];
 

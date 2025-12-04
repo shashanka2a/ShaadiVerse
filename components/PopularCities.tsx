@@ -5,14 +5,14 @@ import Link from "next/link";
 
 const cities = [
   {
-    name: "Warangal",
-    image: "/wgl.png",
-    description: "Historic city with rich cultural heritage",
-  },
-  {
     name: "Nizamabad",
     image: "/nzb.png",
     description: "City of forts and traditional architecture",
+  },
+  {
+    name: "Kamareddy",
+    image: "/kam.png",
+    description: "Scenic town with heritage charm",
   },
   {
     name: "Medchal",
@@ -20,9 +20,9 @@ const cities = [
     description: "Growing urban center with modern venues",
   },
   {
-    name: "Kamareddy",
-    image: "/kam.png",
-    description: "Scenic town with heritage charm",
+    name: "Warangal",
+    image: "/wgl.png",
+    description: "Historic city with rich cultural heritage",
   },
 ];
 
