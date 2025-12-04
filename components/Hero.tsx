@@ -9,12 +9,11 @@ export default function Hero() {
       <div className="absolute inset-0 z-0">
         <div className="relative w-full h-full">
           <Image
-            src="http://googleusercontent.com/image_collection/image_retrieval/14283314775691552163"
-            alt="Traditional South Indian Wedding"
+            src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80"
+            alt="Traditional Indian Wedding Ceremony"
             fill
             className="object-cover object-center"
             priority
-            unoptimized
           />
         </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30"></div>

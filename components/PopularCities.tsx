@@ -7,22 +7,26 @@ const cities = [
   {
     name: "Warangal",
     image:
-      "https://images.unsplash.com/photo-1605445210217-1906cb524225?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description: "Historic city with rich cultural heritage",
   },
   {
     name: "Nizamabad",
     image:
-      "https://images.unsplash.com/photo-1596547608101-7973c17d74db?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description: "City of forts and traditional architecture",
   },
   {
     name: "Medchal",
     image:
-      "https://images.unsplash.com/photo-1566552881560-0be862a7c445?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description: "Growing urban center with modern venues",
   },
   {
     name: "Kamareddy",
     image:
-      "https://images.unsplash.com/photo-1582510003544-4d00b785e271?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description: "Scenic town with heritage charm",
   },
 ];
 
