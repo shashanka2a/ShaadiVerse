@@ -6,26 +6,22 @@ import Link from "next/link";
 const cities = [
   {
     name: "Warangal",
-    image:
-      "https://s7ap1.scene7.com/is/image/incredibleindia/2-kakatiya-rock-and-musical-garden-warangal-telangana-city-hero?qlt=82&ts=1726653480998",
+    image: "/wgl.png",
     description: "Historic city with rich cultural heritage",
   },
   {
     name: "Nizamabad",
-    image:
-      "https://upload.wikimedia.org/wikipedia/commons/e/eb/Ahmed_Pura_Nizamabad.jpg",
+    image: "/nzb.png",
     description: "City of forts and traditional architecture",
   },
   {
     name: "Medchal",
-    image:
-      "https://vushii.com/uploads/1392158335_Durga%20Temple.jpg",
+    image: "/med.png",
     description: "Growing urban center with modern venues",
   },
   {
     name: "Kamareddy",
-    image:
-      "https://content.jdmagicbox.com/v2/comp/kamareddy/a9/9999p8468.8468.121010132251.e3a9/catalogue/kamareddi-railway-station-ashok-nagar-kamareddy-railway-enquiry-services-m1kk7k6pkn.jpg",
+    image: "/kam.png",
     description: "Scenic town with heritage charm",
   },
 ];
