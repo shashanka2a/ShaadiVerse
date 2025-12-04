@@ -7,25 +7,25 @@ const cities = [
   {
     name: "Warangal",
     image:
-      "https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://s7ap1.scene7.com/is/image/incredibleindia/2-kakatiya-rock-and-musical-garden-warangal-telangana-city-hero?qlt=82&ts=1726653480998",
     description: "Historic city with rich cultural heritage",
   },
   {
     name: "Nizamabad",
     image:
-      "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://upload.wikimedia.org/wikipedia/commons/e/eb/Ahmed_Pura_Nizamabad.jpg",
     description: "City of forts and traditional architecture",
   },
   {
     name: "Medchal",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://vushii.com/uploads/1392158335_Durga%20Temple.jpg",
     description: "Growing urban center with modern venues",
   },
   {
     name: "Kamareddy",
     image:
-      "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      "https://content.jdmagicbox.com/v2/comp/kamareddy/a9/9999p8468.8468.121010132251.e3a9/catalogue/kamareddi-railway-station-ashok-nagar-kamareddy-railway-enquiry-services-m1kk7k6pkn.jpg",
     description: "Scenic town with heritage charm",
   },
 ];
